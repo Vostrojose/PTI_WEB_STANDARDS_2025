@@ -6,11 +6,11 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f4f4;
-  color: #333;
+  color: #4d4949;
 }
 
 .top-bar {
-  background: #066860;
+  background: #dc6c10;
   color: white;
   padding: 1rem;
   display: flex;
@@ -42,7 +42,7 @@ body {
 .hero img {
   max-width: 100%;
   height: auto;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .info-section {
