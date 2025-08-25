@@ -1,4 +1,4 @@
-/* Reset e base */
+
 * {
   box-sizing: border-box;
 }
@@ -20,8 +20,8 @@ html, body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  color: rgb(51, 74, 100);
-  background-color: transparent; /* Adicione se necessário */
+  color: rgb(17, 60, 109);
+  background-color: transparent;
 }
 
 .top-bar img {
@@ -40,19 +40,34 @@ html, body {
   margin-right: 1rem;
 }
 
-/* Informações de contato */
-.contact-info p {
-  margin: 2.5rem 10px; /* Corrigido: adicionando unidade 'px' */
+.botao {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #c45c12;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Imagem hero */
-.hero img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border-radius: 0;
-  margin: 0;
-  padding: 0;
+.botao:hover {
+  background-color: #a94e0f;
+}
+
+/* Informações de contato */
+.contact-info p {
+  margin: 2.5rem 10px;
+}
+
+p {
+  color: #c45c12;
+}
+
+h1 {
+  color: #c45c12;
 }
 
 /* Seção de informações */
@@ -87,11 +102,10 @@ input[type="text"] {
 }
 
 button {
-  padding: 0.7rem 1.5rem;
-  background: #c45c12;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  padding: 0.3rem 0.2rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(112, 36, 36);
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -132,15 +146,19 @@ footer {
 }
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .top-bar {
     flex-direction: column;
     text-align: center;
+    align-items: flex-end;
   }
 
-  .logo-area {
-    justify-content: center;
-    margin-bottom: 1rem;
+  .logo {
+    align-self: flex-end;
+  }
+
+  a {
+    color: rgb(241, 114, 17);
   }
 
   input[type="text"] {
@@ -149,5 +167,66 @@ footer {
 
   .info-box {
     flex: 1 1 100%;
+  }
+
+  .button-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 10px;
+    left: 10px;
+    right: 1000px;
+    z-index: 1000;
+  }
+
+  .button-stack button {
+    width: 100%;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .hero {
+    background-image: url('/assets/img/teste6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .hero img {
+    display: none;
+  }
+
+  .contato-topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    padding-left: 5rem;
+  }
+
+  .contato-topo a.botao {
+    width: auto;
+  }
+
+  .contato-topo p {
+    position: absolute;
+    top: 0px;
+    right: 75px;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0%;
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
   }
 }
